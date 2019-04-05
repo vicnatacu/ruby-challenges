@@ -17,43 +17,45 @@
 # Examples - what if both numbers are equal or are strings?
 
 
-# def largest_number (number_1, number_2) #Defining a method
-# nums = [number_1, number_2] #Declaring a array to access number
-#   if number_1.is_a? Numeric and number_2.is_a? Numeric #If statemtns to make sure Numeric is a master class
-#     puts nums.max() #Prints max number
-#   else
-#     puts "Invalid input" #Prints "Invalid input"
-#   end
-# end
+def largest_number (number_1, number_2) #Defining a method
+nums = [number_1, number_2] #Declaring a array to access number
+  if number_1.is_a? Numeric and number_2.is_a? Numeric #If statemtns to make sure Numeric is a master class
+    puts nums.max() #Prints max number
+  else
+    puts "Invalid input" #Prints "Invalid input"
+  end
+end
  
-# largest_number(56,26)
+largest_number(56,26)
+largest_number("good", "bad")
 
-# def largest_number(num1, num2)
-#     if num1 > num2 
-#         puts num1
-#     elsif
-#         num1 < num2
-#         puts num2
-#     else  
-#         num1 = num2
-#         puts "equal"
+def largest_number(num1, num2)
+    if num1 > num2 
+        puts num1
+    elsif
+        num1 < num2
+        puts num2
+    else  
+        num1 = num2
+        puts "equal"
         
-#     end
-# end
-# largest_number(100, 50)
-# largest_number(2, 1000)
-# largest_number(40, 40)
-# def is_a_numeric(num_a, num_b)
-#     num = [num_a, num_b]
-#     if (num_a.is_a? Numeric) && (num_b.is_a? Numeric)
-#         return  p num.max() 
-#     else 
-#         return  p "Invalid input"
-#     end
-# end
-# is_a_numeric(50, 45)
-# is_a_numeric(2, 52)
-# is_a_numeric("happy", "sad")
+    end
+end
+largest_number(100, 50)
+largest_number(2, 1000)
+largest_number(40, 40)
+
+def is_a_numeric(num_a, num_b)
+    num = [num_a, num_b]
+    if (num_a.is_a? Numeric) && (num_b.is_a? Numeric)
+        return  p num.max() 
+    else 
+        return  p "Invalid input"
+    end
+end
+is_a_numeric(50, 45)
+is_a_numeric(2, 52)
+is_a_numeric("happy", "sad")
 
 
 def kind_of(num_x, num_y)
