@@ -11,9 +11,34 @@
 # ruby tests/04_sum_numbers_test.rb
 
 def sum_numbers (numbers)
-  # Your code here
+  sum = 0
+  numbers.each {|num| sum += num}
+  return sum
+
 end
 
+def sum_numbers (numbers)
+  sum = 0
+  numbers.each do |number|
+    sum += number
+  end
+  return sum
+end
+
+def sum_numbers (numbers)
+  sum = 0
+  for number in numbers do 
+    sum += number
+  end
+  return sum
+end
+
+
+
+
+# puts sum_numbers ([1,1,1])
+# puts sum_numbers ([5,2,100,0,10])
+# puts sum_numbers ([55,23,183,0,29])
 
 # OPTIONAL:
 # Go to the tests folder and open 04_sum_numbers_test.rb.
