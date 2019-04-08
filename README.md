@@ -22,7 +22,4 @@ s# Ruby Morning Challenges
 * 02_input_output
 * 03_largest_number
 * 04_sum_numbers
-<<<<<<< HEAD
-=======
 * 05_in_array
->>>>>>> a600065b3f320365a06fe044bcddc70911b1fe59
