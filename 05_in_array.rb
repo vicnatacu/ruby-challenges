@@ -16,7 +16,7 @@
 
 
 
-
+#Using a for loop
 def in_array(needle, haystack)
   for hay in haystack
     if hay == needle 
@@ -26,7 +26,7 @@ def in_array(needle, haystack)
   return false
 end  
 
-#using ruby native method .include?
+#using ruby native method .include? 
 def in_array(needle, haystack)
   haystack.include?(needle) 
 
