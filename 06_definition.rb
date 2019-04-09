@@ -15,5 +15,32 @@
 # ruby tests/06_definition_test.rb
 
 class Definition
-# Your code here
+    # Your code here
+    def initialize()
+        @wordlist = Hash.new
+    end
+    
+    def add_word(word, definition)
+        @wordlist.store(word, definition)
+    end
+    
+    def lookup(word)
+        return @wordlist[word]
+    end
+    
+    def total_words
+        return @wordlist.length
+    end
 end
+
+
+
+ 
+
+definition = Definition.new
+definition.add_word("ruby", "A red, precious stone")
+definition.add_word("rails", "Lorem ipsum")
+puts definition.total_words
+puts definition.lookup("ruby") 
+puts definition.lookup("rails") 
+
