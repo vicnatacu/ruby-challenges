@@ -20,4 +20,24 @@
 
 def included_once (haystack, needle)
   # Your code here
+  count = 0
+  haystack.each do |stack|
+    count += 1 if stack == needle
+  end
+  (count > 1 || count == 0) ? (return false) : (return true)
+
 end
+
+def included_once(haystack, needle)
+  count = 0
+  haystack.each do |stack|
+    if stack == needle
+      count += 1
+    end
+    if count > 1
+      return false
+    end
+  end
+  return count == 1
+end
+

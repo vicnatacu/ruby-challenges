@@ -72,19 +72,3 @@ class Order
     
 end
 
-class Order
-    def initialize
-        order = []
-    end
-
-    def add_item(item, qty)
-        for ele in order do
-            order_item = ele.keys[0]
-            if order_item.name == item.name
-                ele[order_item]+= qty
-                return
-            end
-        end
-        order.push({item => qty})
-    end
-end
