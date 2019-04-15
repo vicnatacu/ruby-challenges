@@ -17,11 +17,7 @@ s# Ruby Morning Challenges
     7. Push to master in your fork:<br/>
      `git push origin master`
 
-<<<<<<< HEAD
-# List of challenge branches
-=======
 ## List of challenge branches
->>>>>>> 7db251037940e1eef793cf520e49867005ffaee3
 * 01_ruby_intro
 * 02_input_output
 * 03_largest_number
