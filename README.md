@@ -24,18 +24,7 @@ s# Ruby Morning Challenges
 * 04_sum_numbers
 * 05_in_array
 * 06_definition
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-* 07_included_once
->>>>>>> 83c12527614c5883557817f66bddd38944975dbb
-=======
-* 07_included_once
-* 08_count_letters
->>>>>>> 7db251037940e1eef793cf520e49867005ffaee3
-=======
 * 07_included_once
 * 08_count_letters
 * 09_vowels
->>>>>>> edb6dc4f8813f7619f327824eb92afe925d068d0
+
