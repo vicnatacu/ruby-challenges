@@ -19,4 +19,12 @@
 
 def unique(mylist)
   # Your code here
+  unique = []
+  mylist.each do |ele|
+    unique << ele if !unique.include?(ele)
+  end
+  unique
 end
+
+puts unique([1,3, 5, 5, 8, 10, 5])
+puts unique(["sam", "tom", "harry", "tom"])
