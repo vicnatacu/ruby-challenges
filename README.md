@@ -33,3 +33,4 @@ s# Ruby Morning Challenges
 * 13_fibonacci
 * 14_hackerman
 * 15_change_letters
+* 16_palindrome
