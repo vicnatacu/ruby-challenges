@@ -23,10 +23,28 @@
 
 # Test your solution with ruby tests/17_combine_hashes.rb
 
+
 def combine_hashes(hash1, hash2)
-  hash3 = {}
-
   # Your code here
-
-  return hash3
+   merge_hash = hash1.merge(hash2) {|k, hash1_value, hash2_value| hash1_value + hash2_value}
+  
+  return merge_hash
 end
+
+def combine_hashes(hash1, hash2)
+  hash1.each do |key, value|
+    hash1[key] = value + hash2[key]
+  end
+  return hash1
+  
+end
+
+puts combine_hashes({a: 4, b: 7, c: 8}, {a: 3, b: 4, c: 7})
+
+def combine_hashes(hash1, hash2)
+  for key, val in hash1 do
+    hash1[key] = val + hash2[key]
+  end
+  return hash1
+end
+
