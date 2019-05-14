@@ -17,9 +17,20 @@
 
 def descending_order(n)
     # Your code goes here
+    array = n.to_s.split(//)
+    array.sort.reverse.inject(:+).to_i
+    
+    
 end
 
 # Test your code here
-descending_order(1)
+puts descending_order(46829173)
+puts descending_order(596979483217563321987537456)
+puts descending_order(5628)
+
+def descending_order(num)
+    return num.digits.sort.reverse.join
+end
+puts descending_order(555234677)
 
 # Add some interesting test cases that test edge cases
