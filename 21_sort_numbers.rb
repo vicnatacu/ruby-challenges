@@ -25,4 +25,21 @@
 
 def sort(num_array)
     # Your code goes here
+    (num_array.length).times do |i|
+        while i > 0
+            if num_array[i-1] > num_array[i] 
+                num_array[i-1], num_array[i] = num_array[i], num_array[i-1]
+            else
+                break
+            end
+            i-=1
+        end
+        
+    end
+    return num_array
+   
 end
+
+puts sort([44, 8, 2, 3])
+
+
