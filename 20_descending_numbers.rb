@@ -34,3 +34,5 @@ end
 puts descending_order(555234677)
 
 # Add some interesting test cases that test edge cases
+
+#solved using two different methods, but using ruby methods
