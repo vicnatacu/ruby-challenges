@@ -34,4 +34,16 @@
 
 def exes_and_ohs(input)
     # Your code goes here
+    unique = input.downcase.split("").uniq
+    array = input.downcase.split("")
+    if unique.length == 2
+        if array.count(unique[0]) == array.count(unique[1])
+            return true
+        end
+    end
+    return false
 end
+
+puts exes_and_ohs("CXCXcx")
+puts exes_and_ohs("oxOOvx")
+
