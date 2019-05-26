@@ -39,3 +39,4 @@ s# Ruby Morning Challenges
 * 19_balanced_number
 * 20_descending_numbers
 * 21_sort_numbers
+* 22_exes_ohs
