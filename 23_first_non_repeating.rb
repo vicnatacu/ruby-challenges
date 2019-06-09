@@ -27,9 +27,28 @@
 
 def first_non_repeating(input)
     # Your code goes here
+    result = input.chars.find {|letter| input.chars.count(letter) == 1}
+    return result || false
 end
 
 # Test your code here
 puts first_non_repeating("aaaabbbcccdeeefgh")
 puts first_non_repeating("wwwhhhggge")
 puts first_non_repeating("wwwhhhggg")
+
+
+def first_non_repeating(input)
+    array = input.chars
+    unique = array.uniq
+    unique.each do |letter|
+        if array.count(letter) == 1
+            return letter
+        end
+    end
+    return false
+end
+
+puts first_non_repeating("aaaabbbcccveeefgh")
+puts first_non_repeating("wwwhhhgggs")
+puts first_non_repeating("wwwhhhggg")
+
