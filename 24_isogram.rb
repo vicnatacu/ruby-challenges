@@ -16,8 +16,25 @@
 
 def isogram?(input)
     # Your code goes here
+    input.downcase.chars.uniq == input.downcase.chars
+
+
 end
+
+def isogram?(input)
+    
+    input.chars.each do |letter|
+        if input.count(letter) > 1
+            return false
+      
+        end
+    end
+    return true
+end
+
 
 # Test your code here
 puts isogram?("hello") #should return false
 puts isogram?("scary") #should return true
+puts isogram?("isogenics")
+puts isogram?("abdefkioli")
