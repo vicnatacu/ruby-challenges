@@ -44,3 +44,4 @@ s# Ruby Morning Challenges
 * 24_isogram
 * 25_remove_adjacent_duplicates
 * 26_max_min
+* 27_in_array_strict
