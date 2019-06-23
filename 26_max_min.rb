@@ -18,7 +18,7 @@
 
 def max_min(num_string)
     # your code goes here
-    num_string = num_string.split(" ").map {|n| n.to_f}
+    num_string = num_string.split(" ").map {|n| n.to_i}
    return num_string = num_string.sort.values_at(-1, 0).join(" ")
 end
 puts max_min("5 2 9 8 23 1")

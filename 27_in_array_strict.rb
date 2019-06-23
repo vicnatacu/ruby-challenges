@@ -26,4 +26,13 @@
 
 def in_array_strict? (string, arr, strict)
     # your code goes here
+    if strict
+        arr.include?(string) ? true : false
+    else 
+        arr.each { |i| i.downcase!}
+        arr.include?(string.downcase) ? true : false
+    end
 end
+
+puts in_array_strict?("HeLLo", ["hi", "howdy", "Hello"], true)
+puts in_array_strict?("HeLLo", ["hi", "howdy", "Hello"], false)
