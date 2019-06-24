@@ -26,6 +26,44 @@
 # has a file name ending in _spec.rb
 
 def good_walk(walk)
-    # your code goes here
+    walk_hash = Hash.new(0)
+    walk.each { |direction| walk_hash[direction] += 1}
+    return false if walk_hash['n'] + walk_hash['s'] + walk_hash['e'] + walk_hash['w'] != 10
+    walk_hash['n'] == walk_hash['s'] && walk_hash['e'] == walk_hash['w'] ? true : false
 end
 
+def good_walk2(walk)
+    return walk.length == 10 && walk.join(" ").gsub(/n|e/, "1").gsub(/s|w/, "-1").split(" ").map(&:to_i).sum == 0
+end
+
+def good_walk3(walk)
+    return false if walk.length != 10
+    position = [0,0]
+    walk.each {|direction|
+    case direction
+    when 'n' then position[0] +=1
+    when 's' then position[0] -=1
+    when 'e' then position[1] +=1
+    when 'w' then position[1] -=1
+    end
+}
+return position.sum == 0
+end
+puts good_walk(['n','s','e','w','n','s','e','w','n','s']) # true
+puts good_walk(['n','n','s','s','e','w','e','w','n','s']) # true
+puts good_walk(['n','s','e','w','n','s','e','w']) # false
+puts good_walk([]) # false
+puts good_walk(['n','n','n','s','e','w','e','w','n','s']) # false
+
+
+puts good_walk2(['n','s','e','w','n','s','e','w','n','s']) # true
+puts good_walk2(['n','n','s','s','e','w','e','w','n','s']) # true
+puts good_walk2(['n','s','e','w','n','s','e','w']) # false
+puts good_walk2([]) # false
+puts good_walk2(['n','n','n','s','e','w','e','w','n','s']) # false
+
+puts good_walk3(['n','s','e','w','n','s','e','w','n','s']) # true
+puts good_walk3(['n','n','s','s','e','w','e','w','n','s']) # true
+puts good_walk3(['n','s','e','w','n','s','e','w']) # false
+puts good_walk3([]) # false
+puts good_walk3(['n','n','n','s','e','w','e','w','n','s']) # false
