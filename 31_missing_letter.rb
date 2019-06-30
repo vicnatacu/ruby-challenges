@@ -17,4 +17,18 @@
 
 def missing_letter(word)
     # your code goes here
+    alpha = ('a'..'z').to_a
+    index = alpha.index word.first.downcase
+    word.each do |letter|
+        if letter.downcase != alpha[index]
+            alpha[index] < letter ? (return alpha[index]) : (return alpha[index].upcase)
+        end
+        index +=1
+    end
+
 end
+puts missing_letter(['a','b','c','d','f'])
+puts missing_letter(['O','Q','R','S'])
+puts missing_letter(['c','e','f','g','h'])
+puts missing_letter(['L','M','N','P'])
+
