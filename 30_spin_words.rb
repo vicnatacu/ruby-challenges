@@ -17,4 +17,16 @@
 
 def spin_words (words)
     # your code goes here
+    result = ""
+    words.split(" ").each do |word|
+        if word.length > 4
+            word.reverse!
+        end
+        result += word + " "
+    end
+    return result.strip
+
 end
+puts spin_words("This is a test")
+puts spin_words("Please reverse anything over five words")
+puts spin_words("spin words will reverse any word with more than 5 letters")
