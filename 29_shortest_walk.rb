@@ -43,6 +43,31 @@
 
 # The test with the challenge use rspec
 
-def shortest_walk(walk)
-    # your code goes here
-end
+def shortest_walk(arr)
+    short_path=[]
+    # outer loop continues until we can't eliminate any more directions
+    done = false
+    while !done do
+      done = true
+      i=0
+      while (i < arr.length)      
+          if ((arr[i] == "NORTH" and arr[i+1] == "SOUTH") or (arr[i] == "SOUTH" and arr[i+1] == "NORTH") or (arr[i] == "EAST" and arr[i+1] == "WEST") or (arr[i] == "WEST" and arr[i+1] == "EAST"))
+              # if adjacent directions are opposite, skip them both and reset done to false
+              # because we may need to make another pass of the resulting array
+              i+=2
+              done = false
+          else
+              # Otherwise, store this direction in our shortest path and move to the next direction
+              short_path << arr[i]
+              i+=1
+          end      
+      end
+      # Set our arr in the loop to the shortest path. We'll check it again if we've
+      # removed anything from the previous iteration
+      arr = short_path
+      # Empty the shortest path array for the next round if needed
+      short_path = []   
+    end
+    # now arr stores the shortest path
+    return arr
+  end
