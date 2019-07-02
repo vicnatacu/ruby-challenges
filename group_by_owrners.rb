@@ -42,3 +42,5 @@ def bin_flip(s)
     end
     return steps
 end
+
+ 
