@@ -15,6 +15,29 @@
 # You can assume the argument given is an integer.
 # Return -1 if any negative argument is provided.
 
-def digital_root(number)
-    # Your code goes here
+def digital_root1(number)
+    return -1 if number < 0
+    return number if number < 10
+
+    sum = 0
+    number.to_s.chars.map(&:to_i).each do |num|
+        sum += num
+    end
+
+    if sum >= 10
+        digital_root1(sum)
+    else
+        return sum
+    end
 end
+
+def digital_root(number)
+    return -1 if number < 0
+    return number if number < 10
+    return digital_root(number.digits.sum)
+end
+
+puts digital_root(67432)
+puts digital_root(321)
+puts digital_root(5554421)
+puts digital_root(34578921)
