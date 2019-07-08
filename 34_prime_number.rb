@@ -25,4 +25,42 @@
 
 def prime_number(number)
     # Your code goes here
+    (2...number-1).to_a.each do |num|
+        return false if number % num == 0
+    end
+    return true
+    
 end
+
+def prime_number(number)
+    #create an array of all numbers
+    numbers = (2...number).to_a
+    #while we haven't eliminated all number up to number,
+    #appy the sieve of eratosthenes
+    while numbers.length > 0 do
+        #set the new prime number and remove that from numbers
+        prime = numbers.shift
+        #remove multiples of prime form the array
+        for n in numbers do
+            #return if the number itself if it is prime
+            if prime == number
+                return number
+            end
+            #remove all multiples of prime
+            if n % prime == 0
+                numbers.delete(n)
+            end
+        end
+    end
+    return prime
+end
+
+puts prime_number(39)
+puts prime_number(34)
+puts prime_number(53)
+puts prime_number(28)
+puts prime_number(23)
+puts prime_number(77)
+puts prime_number(71)
+puts prime_number(221)
+puts prime_number(333)
