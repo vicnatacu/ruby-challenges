@@ -52,3 +52,4 @@ s# Ruby Morning Challenges
 * 32_interesting_number
 * 33_digital_root
 * 34_prime_number
+* 35_group_by_owners
