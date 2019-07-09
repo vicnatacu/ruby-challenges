@@ -13,4 +13,23 @@
 
 def group_by_owners(input)
     # Your code goes here
+    output = {}
+    input.each do |file,owner|
+        if output.key?(owner)
+            output[owner] << file
+        else    
+            output[owner] = [file]
+        end
+    end
+    return output
 end
+
+
+
+output_hash = {}
+output_hash = group_by_owners({'Input.txt' => 'Randy', 'Code.py' => 'Randy', 'Output.txt' => 'Randy'})
+puts output_hash
+
+
+# Expected Output:
+# output_hash = {'Randy' => ['Input.txt', 'Code.py' , 'Output.txt']}
