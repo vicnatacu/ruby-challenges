@@ -24,5 +24,21 @@
 
 
 def bin_flip(s)
-    # Your code goes here
+    s_character = s.chars
+    done=false
+    steps=0
+    while !done do
+        done = true
+        s_character.each_with_index do |c,i|
+            if c == "1"
+                done = false
+                s_character = s_character[0...i] + s_character[i..s_character.length-1].map! {|a| a=="1" ? "0" : "1"}
+                steps +=1
+                break
+            end
+        end
+    end
+    return steps
 end
+puts bin_flip("0101101")
+puts bin_flip("110010")

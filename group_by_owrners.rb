@@ -20,7 +20,7 @@ def group_by_owners(input)
 end
 
 def flip(string, index)
-    while index < string. length
+    while index < string.length
         if string[index] == "1"
             string[index] == "0"
         else
