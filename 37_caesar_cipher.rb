@@ -20,14 +20,34 @@
 
 class CaesarCipher
   def initialize(shift)
-    # your code here
+    @shift = shift
+    @alphabet = ('A'..'Z').to_a
   end
 
   def encode(string)
-    # your code here
+    encoded = ""
+    string.chars.map do |char| 
+        ind = @alphabet.index(char.upcase)
+        shifted = ind + @shift
+        encoded += @alphabet[shifted > @alphabet.length-1 ? (@alphabet.length - shifted) : shifted]
+    end
+    return encoded
   end
   
   def decode(string)
-    # your code here
+    decoded = ""
+    string.chars.map do |char|
+        ind = @alphabet.index(char.upcase)
+        shifted = ind - @shift
+        decoded += @alphabet[shifted]
+    end
+    return decoded
   end
 end
+
+c = CaesarCipher.new(1)
+c.encode('ZOO')
+
+
+c = CaesarCipher.new(5) 
+c.decode('BFKKQJX')
