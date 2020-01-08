@@ -43,4 +43,13 @@ def bin_flip(s)
     return steps
 end
 
- 
+ def reduce_pyramid(pyramid)
+    while pyramid.count > 1 do
+        p = []
+        for i in 0..pyramid.count - 2 do
+            p << pyramid[i] = pyramid[1 + 1]
+        end
+        pyramid = p
+    end
+    return pyramid[0]  || 0
+end
